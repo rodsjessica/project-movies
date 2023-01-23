@@ -18,7 +18,7 @@ function Home() {
                     page: 1,
                 }
             })
-            console.log(response.data.results.slice(0, 10));
+            // console.log(response.data.results.slice(0, 10));
             setMovies(response.data.results.slice(0, 10));
             setLoading(false);
         }
@@ -42,7 +42,7 @@ function Home() {
                         return (
                             <article key={item.id}>
                                 <strong>{item.title}</strong>
-                                <img src={`https://image.tmdb.org/t/p/original/${item.poster_path}`} alt={item.title} />
+                                <img src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt={item.title} />
                                 <Link to={`/filme/${item.id}`}>Acessar</Link>
                             </article>
                         )

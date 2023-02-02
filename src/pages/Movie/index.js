@@ -47,12 +47,11 @@ function Movie() {
         if(hasMovie){
             toast.warn("Esse filme já está na lista");
             return;
-        }else{
-            toast.success("Filme salvo com sucesso!");
         }
 
         savedMovies.push(movies);
         localStorage.setItem("@moviesTips", JSON.stringify(savedMovies));
+        toast.success("Filme salvo com sucesso!");
     }
 
     if(loading){
